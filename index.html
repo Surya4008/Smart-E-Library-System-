@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart E-Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+</head>
+<body>
+    <nav>
+        <button id="toggleDarkMode">🌙 Dark Mode</button>
+        <input type="file" id="pdfUpload" accept=".pdf">
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <div class="filters">
+                <select id="filterType">
+                    <option value="all">All</option>
+                    <option value="pdf">PDF</option>
+                </select>
+                <input type="date" id="filterDate">
+            </div>
+            <div id="libraryList"></div>
+        </aside>
+
+        <main class="viewer">
+            <div id="pdfViewer"></div>
+            <div class="toolbar">
+                <button id="zoomIn">+</button>
+                <button id="zoomOut">-</button>
+                <span id="pageNum">Page: 1</span>
+                <button id="addBookmark">🔖 Bookmark</button>
+                <button id="highlightBtn">🌟 Highlight</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
